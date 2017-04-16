@@ -1,0 +1,70 @@
+
+              <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../site/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../books">Bookshop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../site/contact">Contact</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/cart">Cart</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="signin">
+            <!--<a id="signup" href="#">Sign in / Register</a>-->
+            <% if user_signed_in? %>
+            <div>Signed in as... <%= current_user.email %> (<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>)</div>
+            <% else %>
+            <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
+            <% end %>
+            </div>
+        </div>
+    </nav>
+  
+
+    <!-- Page Content -->
+    <div class="container main-container">
+
+       <div class="row">
+
+            <div class="col-lg-12">
+
+
+              <h2>Resend unlock instructions</h2>
+
+<%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Resend unlock instructions" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+
+
+
+
+
+                
+            </div>
+            <!-- /.col-lg-12 -->
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->

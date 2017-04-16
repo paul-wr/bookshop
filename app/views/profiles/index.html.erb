@@ -1,0 +1,83 @@
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/books">Bookshop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact">Contact</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/cart">Cart</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="signin">
+            <!--<a id="signup" href="#">Sign in / Register</a>-->
+            <% if user_signed_in? %>
+            <div>Signed in as... <%= current_user.email %> (<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>)</div>
+            <% else %>
+            <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
+            <% end %>
+            </div>
+        </div>
+    </nav>
+  
+
+    <!-- Page Content -->
+    <div class="container main-container">
+
+        <div class="row">
+
+            <div class="col-lg-3">
+            <ol class="breadcrumb">
+                   <li class="breadcrumb-item"><a href="home">Home</a></li>
+                </ol>
+                <%= render :partial => '/layouts/sidebar' %>
+
+               
+               
+            </div>   
+            <!-- /.col-lg-3 -->
+
+            <div class="col-lg-9">
+                
+             <p id="notice"><%= notice %></p>
+
+<h1>Listing Profiles</h1>
+
+
+    <% @profiles.each do |profile| %>
+    <ul class="list-group">
+        <li class="list-group-item">Firstname: <%= profile.firstname %></li>
+        <li class="list-group-item">Lastname: <%= profile.lastname %></li>
+        <li class="list-group-item">Address: <%= profile.address %></li>
+        <li class="list-group-item"><%= image_tag profile.userimg, :style => "height:140px" %></li>
+        <li class="list-group-item">User: <%= profile.user %></li>
+        <li class="list-group-item"></li><%= link_to 'Show', profile %></li>
+        <li class="list-group-item"><%= link_to 'Edit', edit_profile_path(profile) %></li>
+        <li class="list-group-item"></li><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+      </ul>
+    <% end %>
+
+<br>
+
+<%= link_to 'New Profile', new_profile_path %>
+
+
+
+
+
+            </div>
+            <!-- /.col-lg-9 -->
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
