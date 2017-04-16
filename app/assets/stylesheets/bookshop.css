@@ -15,7 +15,15 @@ body {
 .navbar {
     height: 80px!important;
 }
-
+.navbar-inverse .navbar-nav .nav-link {
+    font-size: 14px;
+    font-size: 17px;
+    padding: 14px 21px;
+    background-color: #1c5b1c!important;
+    margin-right: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
 .bottom-line {
     border-bottom: 2px solid #1c5b1c;
 }
