@@ -22,6 +22,14 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+* 
+
+# Ruby on Rails Tutorial: "hello, world!"
+
+This is the first application for the
+[*Ruby on Rails Tutorial*](http://www.railstutorial.org/)
+by [Manuel Tova](http://www.michaelhartl.com/).
+
 
 
 Please feel free to use a different markup language if you do not plan to run
