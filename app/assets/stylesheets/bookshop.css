@@ -42,6 +42,13 @@ body {
     color: #000;
 }
 
+.contact .btn-warning {
+    color: #fff;
+    width: 100%;
+    background-color: #1c5b1c;
+    border-color: #eeeeee;
+}
+
 .form2 {
     position: relative;
     margin: 0 auto;
