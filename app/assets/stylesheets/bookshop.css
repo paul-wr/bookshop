@@ -24,9 +24,14 @@ body {
     text-transform: uppercase;
     color: #ffffff;
 }
+<<<<<<< HEAD
 
 .navbar-inverse .navbar-nav .nav-link:hover, .navbar-inverse .navbar-nav .active > .nav-link {
     background: #ffffff!important;
+=======
+.navbar-inverse .navbar-nav .nav-link:hover, .navbar-inverse .navbar-nav .active>.nav-link {
+    background: #fff !important;
+>>>>>>> eccf749f0a871bab59d40d5e3782045ece221ca4
     opacity: 1!important;
     color: #1c5b1c;
     border-radius: 2px;
@@ -42,6 +47,13 @@ body {
     background-color: #eee;
     margin-top: 40px;
     color: #000;
+}
+
+.contact .btn-warning {
+    color: #fff;
+    width: 100%;
+    background-color: #1c5b1c;
+    border-color: #eeeeee;
 }
 
 .form2 {
