@@ -55,13 +55,99 @@
 </head>
 
 <body>
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+  
+  <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container">
+           <a class="navbar-brand" href="#">BESTBOOKS</a>
+            <div class="collapse navbar-collapse" id="navbarExample">
+ 
+  
+    <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/books">Bookshop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact">Contact</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/cart">Cart</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="signin">
+            <!--<a id="signup" href="#">Sign in / Register</a>-->
+            <% if user_signed_in? %>
+            <div>Signed in as... <%= current_user.email %> (<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>)</div>
+            <% else %>
+            <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
+            <% end %>
+            </div>
+        </div>
+    </nav>
+  
+
+    <!-- Page Content -->
+    <div class="container main-container">
+
+        <div class="row">
+
+            <div class="col-lg-3">
+                 <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="home">Home</a></li>
+                    <li class="breadcrumb-item active">About</li>
+                </ol>
+                <%= render :partial => '/layouts/sidebar' %>
+
+               
+               
+            </div>   
+            <!-- /.col-lg-3 -->
+
+            <div class="col-lg-9">
+                <!-- This file lives in public/404.html -->
+              <div class="dialog">
+              <div>
+                <h1>The page you were looking for doesn't exist.</h1>
+                <p>You may have mistyped the address or the page may have moved.</p>
+              </div>
+              <p>If you are the application owner check the logs for more information.</p>
+            </div>
+  
+  
+               
+
+            </div>
+            <!-- /.col-lg-9 -->
+
+        </div>
+        <!-- /.row -->
+
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
+    <!-- /.container -->
+    
+    
+  <!-- Footer -->
+    <footer class="py-5 bg-inverse">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Bookshop 2017</p>
+        </div>
+        <!-- /.container -->
+    </footer>
 </body>
 </html>
+
+
+</body>
+</html>
+
+
