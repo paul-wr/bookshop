@@ -50,7 +50,7 @@
                 <h2>Biography</h2>
          
                 
-              <% @gen="biography" %>
+              <% @gen="%biography%" %>
                 <div class="row">
                   <% @books.where("genre like ?", @gen).each do |book| %>
                   <div class="col-md-4">
