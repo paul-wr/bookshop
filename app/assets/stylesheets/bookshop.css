@@ -8,8 +8,10 @@
  */
 
 
-body {
-    padding-top: 54px;
+html, body {
+   		margin:0;
+   		padding:0;
+   		height:100%;
 }
 
 .navbar {
@@ -84,6 +86,10 @@ body {
     position: relative;
     width: 100%;
     margin: 0 auto;
+}
+
+.marg-b {
+  margin-bottom: 160px; 
 }
 
 .expand {
@@ -286,10 +292,7 @@ fa icons
     color: #ffffff!important;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
+
 
 .footer {
   position: absolute;
