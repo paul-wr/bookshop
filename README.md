@@ -24,11 +24,8 @@ Things you may want to cover:
 * ...
 * 
 
-# Ruby on Rails Tutorial: "hello, world!"
+# Ruby on Rails Ecommerce Project
 
-This is the first application for the
-[*Ruby on Rails Tutorial*](http://www.railstutorial.org/)
-by [Manuel Tova](http://www.michaelhartl.com/).
 
 
 
