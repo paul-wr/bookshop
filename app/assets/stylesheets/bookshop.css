@@ -320,5 +320,8 @@ fa icons
     }
 .breadcrumb{
 margin-top: 90px!important;    
-    }    
+    }
+h1, h2{
+margin-top: 75px!important;    
+    }
 }
