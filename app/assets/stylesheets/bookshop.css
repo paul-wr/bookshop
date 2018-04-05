@@ -37,6 +37,10 @@ html, body {
     transition: ease-in .5s;
 }
 
+.navbar-nav > a.nav-link {
+    width: 100%!important;
+}
+
 .bottom-line {
     border-bottom: 2px solid #1c5b1c;
 }
@@ -306,6 +310,14 @@ fa icons
     margin-top: 5px;
 }
 
+.navbar-inverse .navbar-toggler {
+    border-color: rgba(255,255,255,0.1);
+    width: 50px;
+    outline: none;
+    z-index: 999 !important;
+}
+
+
 
 @media (min-width: 992px) {
     body {
@@ -323,5 +335,17 @@ margin-top: 90px!important;
     }
 h1, h2{
 margin-top: 75px!important;    
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px){
+    .nav-link {
+    font-size: 14px;
+    font-size: 17px;
+    padding: 14px 21px;
+    margin-right: 1px;
+    max-width: 100%;
+    width: 400px!important;
+    color: #ffffff;
     }
 }
