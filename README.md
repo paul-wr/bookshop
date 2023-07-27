@@ -21,8 +21,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
-* 
+* git push heroku master
 
 # Ruby on Rails Ecommerce Project
 
