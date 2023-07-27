@@ -5,7 +5,7 @@ gem 'activemerchant'
 gem 'font-awesome-sass'
 gem 'devise', '~> 4.1', '4.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.0'
+gem 'rails', '4.2.8'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
  gem 'sqlite3'
